@@ -27,7 +27,7 @@ module.exports = React.createClass({
 
     getTitle: function ()  {
         return (
-            <h3 className='article-header'>{this.props.article.title}</h3>
+            <h3 className='article-header'><a href={this.props.article.url} className=''>{this.props.article.title}</a></h3>
         );
     },
 
@@ -36,15 +36,25 @@ module.exports = React.createClass({
         return description ? <p className='article-description'>{description}</p> : null;
     },
 
+    getDomain: function() {
+        var domain = this.props.article.host;
+        return domain;
+    },
+
     render: function () {
         return (
-            <a href={'/article/' + encodeURIComponent(this.props.article.url)} className='thumbnail article'>
-                {this.getImageElement()}
-                <div className='caption'>
-                    {this.getTitle()}
-                    {this.getDescription()}
+            <div className='article'>
+                <div className='itemPadder'>
+                    <a href={this.props.article.url} className=''>
+                        {this.getImageElement()}
+                    </a>
+                        <div className='caption'>
+                            <p>{this.getDomain()}</p>
+                            {this.getTitle()}
+                            {this.getDescription()}
+                        </div>
                 </div>
-            </a>
+            </div>
         );
     }
 });
