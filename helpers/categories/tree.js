@@ -4,52 +4,16 @@ var menuTree = [
         value: ''
     },
     {
-        display: 'Technology',
-        value: 'technology',
+        display: 'Vålerenga',
+        value: 'vålerenga',
         children: [
             {
-                display: 'HackerNews',
-                value: 'hackernews'
+                display: 'fotball',
+                value: 'fotball'
             },
             {
-                display: 'Gaming',
-                value: 'gaming'
-            },
-            {
-                display: 'Coding',
-                value: 'coding',
-                children: [
-                    {
-                        display: 'Javascript',
-                        value: 'javascript'
-                    },
-                    {
-                        display: 'CSS',
-                        value: 'css',
-                    }
-                ]
-            },
-            {
-                display: 'Science',
-                value: 'science'
-            }
-        ]
-    },
-    {
-        display: 'News',
-        value: 'news',
-        children: [
-            {
-                display: 'Sports',
-                value: 'sports'
-            },
-            {
-                display: 'Economy',
-                value: 'economy'
-            },
-            {
-                display: 'World',
-                value: 'world'
+                display: 'hockey',
+                value: 'hockey'
             }
         ]
     }

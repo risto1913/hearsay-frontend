@@ -6,6 +6,8 @@ var React = require('react');
 
 var ImageComponent = require('./image');
 
+var dateFormat = require('dateformat');
+
 module.exports = React.createClass({
     displayName: 'Article',
 
@@ -40,6 +42,21 @@ module.exports = React.createClass({
         var domain = this.props.article.host;
         return domain;
     },
+    getDomainImage: function() {
+        var prefix = 'http://g.etfv.co/http://';
+        var domain = this.props.article.host;
+        var src = prefix+domain;
+
+
+        return src ? <ImageComponent src={src} /> : null;
+    },
+    getDate: function() {
+        var d;
+        d = this.props.article.posted;
+        var cpub = dateFormat(d, "dddd dd mmmm h:MM");
+        var pub = cpub;
+        return pub;
+    },
 
     render: function () {
         return (
@@ -49,9 +66,11 @@ module.exports = React.createClass({
                         {this.getImageElement()}
                     </a>
                         <div className='caption'>
-                            <p>{this.getDomain()}</p>
+                            <p className='meta'>{this.getDomainImage}{this.getDomain()} {this.getDate()}</p>
+                            <div className='padder'>
                             {this.getTitle()}
                             {this.getDescription()}
+                            </div>
                         </div>
                 </div>
             </div>

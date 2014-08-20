@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var RedisStore = require('connect-redis')(session);
 var cookieParser = require('cookie-parser');
+var dateFormat = require('dateformat');
 var app = express();
 
 // config and setup helpers
