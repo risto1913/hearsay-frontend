@@ -27,7 +27,7 @@ module.exports = React.createClass({
 
     render: function () {
         return (
-            <div className='container'>
+            <div className='container padded'>
                 <form>
                     <div className='form-group'>
                         <select onChange={this.handleChange} className='form-control'>

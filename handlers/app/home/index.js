@@ -5,7 +5,7 @@ var categories = require('../../../helpers/categories/tree');
 exports = module.exports = function (services, helpers) {
     return function (req, res, next) {
         var context = {
-            title: 'Hearsay - The Latest News',
+            title: 'Enga.cc - siste nytt',
             description: 'News service',
             startTime: new Date(),
             categories: categories

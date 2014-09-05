@@ -2,6 +2,8 @@ var browserify = require('browserify');
 var gulp = require('gulp');
 var handleErrors = require('../util/handle-errors');
 var source = require('vinyl-source-stream');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 
 function createSingleBundle (options) {
     browserify({

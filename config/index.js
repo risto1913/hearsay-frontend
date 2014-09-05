@@ -27,7 +27,7 @@ var config = module.exports = convict({
     session: {
         key: {
             doc: 'Session key.',
-            default: 'connect.sid',
+            default: 'express.sid',//'connect.sid',
             env: 'SESSION_KEY'
         }
     },
@@ -35,7 +35,7 @@ var config = module.exports = convict({
         port: {
             doc: 'The server port to bind.',
             format: 'port',
-            default: 0,
+            default: 3000,
             env: 'PORT'
         },
         secret: {
@@ -43,7 +43,7 @@ var config = module.exports = convict({
             format: function (val) {
                 if (!validator.isLength(val, 10)) _throw(new Error('Application secret must be at least 10 characters'));
             },
-            default: 'somesillysecret',
+            default: 'somecrazyhash',// 'somesillysecret',
             env: 'APPSECRET'
         }
     },
@@ -57,7 +57,7 @@ var config = module.exports = convict({
         },
         domain: {
             doc: 'The client domain (absolute)',
-            default: 'localhost',
+            default: '127.0.0.1',
             env: 'CLIENT_DOMAIN'
         }
     },
@@ -65,7 +65,7 @@ var config = module.exports = convict({
         mongo: {
             url: {
                 doc: 'MongoDB url to connect to (including db reference)',
-                default: 'mongodb://localhost/express-passport-app',
+                default: 'mongodb://localhost/hearsay',
                 env: 'MONGO_URL'
             }
         },

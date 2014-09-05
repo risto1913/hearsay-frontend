@@ -44,7 +44,9 @@
     "nib": "~1.0.2",
     "envify": "~1.2.1",
     "reactify": "0.14.x",
-    "jest-cli": "^0.1.18"
+    "jest-cli": "^0.1.18",
+    "gulp-concat": "~2.3.4",
+    "gulp-uglify": "~0.3.2"
   },
   "browserify": {
     "transform": [

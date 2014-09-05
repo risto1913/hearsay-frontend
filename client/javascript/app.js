@@ -18,7 +18,7 @@ var CategorySelecter = require('./modules/components/category-selecter');
 var Head = require('./modules/components/head');
 var Header = require('./modules/components/header');
 var ExternalScripts = require('./modules/components/external-scripts');
-
+console.log(config);
 // Main page component (this is asyncronous)
 var App = React.createClass({
     displayName: 'MainApp',
